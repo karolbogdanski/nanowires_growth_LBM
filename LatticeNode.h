@@ -1,10 +1,11 @@
 #ifndef LATTICENODE_H
 #define LATTICENODE_H
 
-struct LatticeNode {
+struct LatticeNode
+{
     double feq[9]; // Equilibrium function
-    double f[9]; // Distribution function
-    double rho;  // Density
+    double f[9];   // Distribution function
+    double rho;    // Density
     double ux, uy; // Velocity components
 
     LatticeNode();

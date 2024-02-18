@@ -5,17 +5,20 @@
 
 using namespace std;
 
-
-void printLattice(Lattice& lattice) {
-    for (int y = 0; y < lattice.height; ++y) {
-        for (int x = 0; x < lattice.width; ++x) {
+void printLattice(Lattice &lattice)
+{
+    for (int y = 0; y < lattice.height; ++y)
+    {
+        for (int x = 0; x < lattice.width; ++x)
+        {
             lattice.printNode(x, y);
         }
         std::cout << std::endl;
     }
 }
 
-int main() {
+int main()
+{
 
     cout << "dupa" << endl;
     string dupa = "ass";
@@ -23,16 +26,16 @@ int main() {
 
     Lattice lattice(5, 5); // Create a 5x5 lattice
     printLattice(lattice);
-    
+
     lattice.initializeToEquilibrium(1);
     printLattice(lattice);
 
-    lattice.initializeRandomly(); 
+    lattice.initializeRandomly();
     printLattice(lattice);
 
     lattice.countFeqs();
     printLattice(lattice);
-    
+
     lattice.collision(1.0, 1.0);
     printLattice(lattice);
 
